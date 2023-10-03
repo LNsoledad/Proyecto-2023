@@ -1,0 +1,25 @@
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema de Ventas.vbprojAssemblyReference.cache
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema_de_Ventas.Resources.resources
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema de Ventas.vbproj.GenerateResource.cache
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema de Ventas.vbproj.CoreCompileInputs.cache
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema_de_Ventas.FormAgregarUsuario.resources
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema_de_Ventas.FormEditarUsuario.resources
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema_de_Ventas.FormUsuario.resources
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema_de_Ventas.FormLogin.resources
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema_de_Ventas.FormPrincipal.resources
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema_de_Ventas.FormRealizarBackUp.resources
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema_de_Ventas.FormReportes.resources
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema_de_Ventas.FormAgregarProducto.resources
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema_de_Ventas.FormEditarProducto.resources
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema_de_Ventas.FormProductos.resources
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema_de_Ventas.FormAgregarClientes.resources
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema_de_Ventas.FormClientes.resources
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema_de_Ventas.FormEditarClientes.resources
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema_de_Ventas.FormVentasConTab.resources
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\bin\Debug\Sistema de Ventas.exe.config
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\bin\Debug\Sistema de Ventas.exe
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\bin\Debug\Sistema de Ventas.pdb
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\bin\Debug\Sistema de Ventas.xml
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema de Ventas.exe
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema de Ventas.xml
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema de Ventas.pdb
