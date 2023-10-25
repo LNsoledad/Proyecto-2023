@@ -1,0 +1,642 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="InformaticaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Categorias">
+          <Key>
+            <PropertyRef Name="id_categoria" />
+          </Key>
+          <Property Name="id_categoria" Type="int" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Empleados">
+          <Key>
+            <PropertyRef Name="Dni_empleados" />
+          </Key>
+          <Property Name="Dni_empleados" Type="int" Nullable="false" />
+          <Property Name="apellido" Type="varchar" MaxLength="20" />
+          <Property Name="nombre" Type="varchar" MaxLength="25" />
+          <Property Name="direccion" Type="varchar" MaxLength="30" />
+          <Property Name="telefono" Type="varchar" MaxLength="25" />
+          <Property Name="fecha_ingreso" Type="datetime" />
+          <Property Name="id_provincia" Type="int" />
+          <Property Name="estado_emplead" Type="bit" />
+          <Property Name="Email" Type="varchar" MaxLength="30" />
+          <Property Name="fecha_Nacimiento" Type="date" />
+          <Property Name="Sexo" Type="varchar" MaxLength="15" />
+          <Property Name="turno" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Marcas">
+          <Key>
+            <PropertyRef Name="id_marca" />
+          </Key>
+          <Property Name="id_marca" Type="int" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Origen_Producto">
+          <Key>
+            <PropertyRef Name="id_origen" />
+          </Key>
+          <Property Name="id_origen" Type="int" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Productos">
+          <Key>
+            <PropertyRef Name="id_producto" />
+          </Key>
+          <Property Name="id_producto" Type="int" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="25" />
+          <Property Name="id_categoria" Type="int" />
+          <Property Name="id_marca" Type="int" />
+          <Property Name="stock" Type="int" />
+          <Property Name="precio" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="estado" Type="bit" />
+          <Property Name="precio_costo" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="id_origen" Type="int" />
+          <Property Name="id_proveedores" Type="int" />
+        </EntityType>
+        <EntityType Name="Proveedores">
+          <Key>
+            <PropertyRef Name="id_proveedor" />
+          </Key>
+          <Property Name="id_proveedor" Type="int" Nullable="false" />
+          <Property Name="razon_social" Type="varchar" MaxLength="20" />
+          <Property Name="direccion" Type="varchar" MaxLength="25" />
+          <Property Name="telefono" Type="varchar" MaxLength="15" />
+          <Property Name="email" Type="varchar" MaxLength="25" />
+          <Property Name="id_provincia" Type="int" />
+        </EntityType>
+        <EntityType Name="Provincia">
+          <Key>
+            <PropertyRef Name="Id_provincia" />
+          </Key>
+          <Property Name="Id_provincia" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="tipoUsuario">
+          <Key>
+            <PropertyRef Name="id_tipoUsuario" />
+          </Key>
+          <Property Name="id_tipoUsuario" Type="int" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="id_usuario" />
+          </Key>
+          <Property Name="id_usuario" Type="int" Nullable="false" />
+          <Property Name="dni_Empleados" Type="int" />
+          <Property Name="contraseña" Type="varchar" MaxLength="25" />
+          <Property Name="id_tipoUsuario" Type="int" />
+          <Property Name="Estado_usuario" Type="bit" />
+        </EntityType>
+        <Association Name="FK__Empleados__id_pr__7B264821">
+          <End Role="Provincia" Type="Self.Provincia" Multiplicity="0..1" />
+          <End Role="Empleados" Type="Self.Empleados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provincia">
+              <PropertyRef Name="Id_provincia" />
+            </Principal>
+            <Dependent Role="Empleados">
+              <PropertyRef Name="id_provincia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Productos__id_ca__02FC7413">
+          <End Role="Categorias" Type="Self.Categorias" Multiplicity="0..1" />
+          <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categorias">
+              <PropertyRef Name="id_categoria" />
+            </Principal>
+            <Dependent Role="Productos">
+              <PropertyRef Name="id_categoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Productos__id_ma__03F0984C">
+          <End Role="Marcas" Type="Self.Marcas" Multiplicity="0..1" />
+          <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Marcas">
+              <PropertyRef Name="id_marca" />
+            </Principal>
+            <Dependent Role="Productos">
+              <PropertyRef Name="id_marca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Productos__id_or__02084FDA">
+          <End Role="Origen_Producto" Type="Self.Origen_Producto" Multiplicity="0..1" />
+          <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Origen_Producto">
+              <PropertyRef Name="id_origen" />
+            </Principal>
+            <Dependent Role="Productos">
+              <PropertyRef Name="id_origen" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Productos__id_pr__04E4BC85">
+          <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="0..1" />
+          <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Proveedores">
+              <PropertyRef Name="id_proveedor" />
+            </Principal>
+            <Dependent Role="Productos">
+              <PropertyRef Name="id_proveedores" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Proveedor__id_pr__5CD6CB2B">
+          <End Role="Provincia" Type="Self.Provincia" Multiplicity="0..1" />
+          <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provincia">
+              <PropertyRef Name="Id_provincia" />
+            </Principal>
+            <Dependent Role="Proveedores">
+              <PropertyRef Name="id_provincia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Usuarios__dni_Em__7EF6D905">
+          <End Role="Empleados" Type="Self.Empleados" Multiplicity="0..1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empleados">
+              <PropertyRef Name="Dni_empleados" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="dni_Empleados" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Usuarios__id_tip__7E02B4CC">
+          <End Role="tipoUsuario" Type="Self.tipoUsuario" Multiplicity="0..1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipoUsuario">
+              <PropertyRef Name="id_tipoUsuario" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="id_tipoUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="InformaticaModelStoreContainer">
+          <EntitySet Name="Categorias" EntityType="Self.Categorias" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Empleados" EntityType="Self.Empleados" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Marcas" EntityType="Self.Marcas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Origen_Producto" EntityType="Self.Origen_Producto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Productos" EntityType="Self.Productos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Proveedores" EntityType="Self.Proveedores" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Provincia" EntityType="Self.Provincia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tipoUsuario" EntityType="Self.tipoUsuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Empleados__id_pr__7B264821" Association="Self.FK__Empleados__id_pr__7B264821">
+            <End Role="Provincia" EntitySet="Provincia" />
+            <End Role="Empleados" EntitySet="Empleados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Productos__id_ca__02FC7413" Association="Self.FK__Productos__id_ca__02FC7413">
+            <End Role="Categorias" EntitySet="Categorias" />
+            <End Role="Productos" EntitySet="Productos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Productos__id_ma__03F0984C" Association="Self.FK__Productos__id_ma__03F0984C">
+            <End Role="Marcas" EntitySet="Marcas" />
+            <End Role="Productos" EntitySet="Productos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Productos__id_or__02084FDA" Association="Self.FK__Productos__id_or__02084FDA">
+            <End Role="Origen_Producto" EntitySet="Origen_Producto" />
+            <End Role="Productos" EntitySet="Productos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Productos__id_pr__04E4BC85" Association="Self.FK__Productos__id_pr__04E4BC85">
+            <End Role="Proveedores" EntitySet="Proveedores" />
+            <End Role="Productos" EntitySet="Productos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Proveedor__id_pr__5CD6CB2B" Association="Self.FK__Proveedor__id_pr__5CD6CB2B">
+            <End Role="Provincia" EntitySet="Provincia" />
+            <End Role="Proveedores" EntitySet="Proveedores" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Usuarios__dni_Em__7EF6D905" Association="Self.FK__Usuarios__dni_Em__7EF6D905">
+            <End Role="Empleados" EntitySet="Empleados" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Usuarios__id_tip__7E02B4CC" Association="Self.FK__Usuarios__id_tip__7E02B4CC">
+            <End Role="tipoUsuario" EntitySet="tipoUsuario" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="InformaticaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Categorias">
+          <Key>
+            <PropertyRef Name="id_categoria" />
+          </Key>
+          <Property Name="id_categoria" Type="Int32" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Productos" Relationship="Self.FK__Productos__id_ca__02FC7413" FromRole="Categorias" ToRole="Productos" />
+        </EntityType>
+        <EntityType Name="Empleados">
+          <Key>
+            <PropertyRef Name="Dni_empleados" />
+          </Key>
+          <Property Name="Dni_empleados" Type="Int32" Nullable="false" />
+          <Property Name="apellido" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="direccion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="telefono" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="fecha_ingreso" Type="DateTime" Precision="3" />
+          <Property Name="id_provincia" Type="Int32" />
+          <Property Name="estado_emplead" Type="Boolean" />
+          <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="fecha_Nacimiento" Type="DateTime" Precision="0" />
+          <Property Name="Sexo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="turno" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Provincia" Relationship="Self.FK__Empleados__id_pr__7B264821" FromRole="Empleados" ToRole="Provincia" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK__Usuarios__dni_Em__7EF6D905" FromRole="Empleados" ToRole="Usuarios" />
+        </EntityType>
+        <EntityType Name="Marcas">
+          <Key>
+            <PropertyRef Name="id_marca" />
+          </Key>
+          <Property Name="id_marca" Type="Int32" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Productos" Relationship="Self.FK__Productos__id_ma__03F0984C" FromRole="Marcas" ToRole="Productos" />
+        </EntityType>
+        <EntityType Name="Origen_Producto">
+          <Key>
+            <PropertyRef Name="id_origen" />
+          </Key>
+          <Property Name="id_origen" Type="Int32" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Productos" Relationship="Self.FK__Productos__id_or__02084FDA" FromRole="Origen_Producto" ToRole="Productos" />
+        </EntityType>
+        <EntityType Name="Productos">
+          <Key>
+            <PropertyRef Name="id_producto" />
+          </Key>
+          <Property Name="id_producto" Type="Int32" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="id_categoria" Type="Int32" />
+          <Property Name="id_marca" Type="Int32" />
+          <Property Name="stock" Type="Int32" />
+          <Property Name="precio" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="estado" Type="Boolean" />
+          <Property Name="precio_costo" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="id_origen" Type="Int32" />
+          <Property Name="id_proveedores" Type="Int32" />
+          <NavigationProperty Name="Categorias" Relationship="Self.FK__Productos__id_ca__02FC7413" FromRole="Productos" ToRole="Categorias" />
+          <NavigationProperty Name="Marcas" Relationship="Self.FK__Productos__id_ma__03F0984C" FromRole="Productos" ToRole="Marcas" />
+          <NavigationProperty Name="Origen_Producto" Relationship="Self.FK__Productos__id_or__02084FDA" FromRole="Productos" ToRole="Origen_Producto" />
+          <NavigationProperty Name="Proveedores" Relationship="Self.FK__Productos__id_pr__04E4BC85" FromRole="Productos" ToRole="Proveedores" />
+        </EntityType>
+        <EntityType Name="Proveedores">
+          <Key>
+            <PropertyRef Name="id_proveedor" />
+          </Key>
+          <Property Name="id_proveedor" Type="Int32" Nullable="false" />
+          <Property Name="razon_social" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="direccion" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="telefono" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="id_provincia" Type="Int32" />
+          <NavigationProperty Name="Productos" Relationship="Self.FK__Productos__id_pr__04E4BC85" FromRole="Proveedores" ToRole="Productos" />
+          <NavigationProperty Name="Provincia" Relationship="Self.FK__Proveedor__id_pr__5CD6CB2B" FromRole="Proveedores" ToRole="Provincia" />
+        </EntityType>
+        <EntityType Name="Provincia">
+          <Key>
+            <PropertyRef Name="Id_provincia" />
+          </Key>
+          <Property Name="Id_provincia" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Empleados" Relationship="Self.FK__Empleados__id_pr__7B264821" FromRole="Provincia" ToRole="Empleados" />
+          <NavigationProperty Name="Proveedores" Relationship="Self.FK__Proveedor__id_pr__5CD6CB2B" FromRole="Provincia" ToRole="Proveedores" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tipoUsuario">
+          <Key>
+            <PropertyRef Name="id_tipoUsuario" />
+          </Key>
+          <Property Name="id_tipoUsuario" Type="Int32" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK__Usuarios__id_tip__7E02B4CC" FromRole="tipoUsuario" ToRole="Usuarios" />
+        </EntityType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="id_usuario" />
+          </Key>
+          <Property Name="id_usuario" Type="Int32" Nullable="false" />
+          <Property Name="dni_Empleados" Type="Int32" />
+          <Property Name="contraseña" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="id_tipoUsuario" Type="Int32" />
+          <Property Name="Estado_usuario" Type="Boolean" />
+          <NavigationProperty Name="Empleados" Relationship="Self.FK__Usuarios__dni_Em__7EF6D905" FromRole="Usuarios" ToRole="Empleados" />
+          <NavigationProperty Name="tipoUsuario" Relationship="Self.FK__Usuarios__id_tip__7E02B4CC" FromRole="Usuarios" ToRole="tipoUsuario" />
+        </EntityType>
+        <Association Name="FK__Productos__id_ca__02FC7413">
+          <End Role="Categorias" Type="Self.Categorias" Multiplicity="0..1" />
+          <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categorias">
+              <PropertyRef Name="id_categoria" />
+            </Principal>
+            <Dependent Role="Productos">
+              <PropertyRef Name="id_categoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Empleados__id_pr__7B264821">
+          <End Role="Provincia" Type="Self.Provincia" Multiplicity="0..1" />
+          <End Role="Empleados" Type="Self.Empleados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provincia">
+              <PropertyRef Name="Id_provincia" />
+            </Principal>
+            <Dependent Role="Empleados">
+              <PropertyRef Name="id_provincia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Usuarios__dni_Em__7EF6D905">
+          <End Role="Empleados" Type="Self.Empleados" Multiplicity="0..1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empleados">
+              <PropertyRef Name="Dni_empleados" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="dni_Empleados" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Productos__id_ma__03F0984C">
+          <End Role="Marcas" Type="Self.Marcas" Multiplicity="0..1" />
+          <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Marcas">
+              <PropertyRef Name="id_marca" />
+            </Principal>
+            <Dependent Role="Productos">
+              <PropertyRef Name="id_marca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Productos__id_or__02084FDA">
+          <End Role="Origen_Producto" Type="Self.Origen_Producto" Multiplicity="0..1" />
+          <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Origen_Producto">
+              <PropertyRef Name="id_origen" />
+            </Principal>
+            <Dependent Role="Productos">
+              <PropertyRef Name="id_origen" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Productos__id_pr__04E4BC85">
+          <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="0..1" />
+          <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Proveedores">
+              <PropertyRef Name="id_proveedor" />
+            </Principal>
+            <Dependent Role="Productos">
+              <PropertyRef Name="id_proveedores" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Proveedor__id_pr__5CD6CB2B">
+          <End Role="Provincia" Type="Self.Provincia" Multiplicity="0..1" />
+          <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provincia">
+              <PropertyRef Name="Id_provincia" />
+            </Principal>
+            <Dependent Role="Proveedores">
+              <PropertyRef Name="id_provincia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Usuarios__id_tip__7E02B4CC">
+          <End Role="tipoUsuario" Type="Self.tipoUsuario" Multiplicity="0..1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipoUsuario">
+              <PropertyRef Name="id_tipoUsuario" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="id_tipoUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="InformaticaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Categorias" EntityType="Self.Categorias" />
+          <EntitySet Name="Empleados" EntityType="Self.Empleados" />
+          <EntitySet Name="Marcas" EntityType="Self.Marcas" />
+          <EntitySet Name="Origen_Producto" EntityType="Self.Origen_Producto" />
+          <EntitySet Name="Productos" EntityType="Self.Productos" />
+          <EntitySet Name="Proveedores" EntityType="Self.Proveedores" />
+          <EntitySet Name="Provincia" EntityType="Self.Provincia" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="tipoUsuario" EntityType="Self.tipoUsuario" />
+          <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
+          <AssociationSet Name="FK__Productos__id_ca__02FC7413" Association="Self.FK__Productos__id_ca__02FC7413">
+            <End Role="Categorias" EntitySet="Categorias" />
+            <End Role="Productos" EntitySet="Productos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Empleados__id_pr__7B264821" Association="Self.FK__Empleados__id_pr__7B264821">
+            <End Role="Provincia" EntitySet="Provincia" />
+            <End Role="Empleados" EntitySet="Empleados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Usuarios__dni_Em__7EF6D905" Association="Self.FK__Usuarios__dni_Em__7EF6D905">
+            <End Role="Empleados" EntitySet="Empleados" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Productos__id_ma__03F0984C" Association="Self.FK__Productos__id_ma__03F0984C">
+            <End Role="Marcas" EntitySet="Marcas" />
+            <End Role="Productos" EntitySet="Productos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Productos__id_or__02084FDA" Association="Self.FK__Productos__id_or__02084FDA">
+            <End Role="Origen_Producto" EntitySet="Origen_Producto" />
+            <End Role="Productos" EntitySet="Productos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Productos__id_pr__04E4BC85" Association="Self.FK__Productos__id_pr__04E4BC85">
+            <End Role="Proveedores" EntitySet="Proveedores" />
+            <End Role="Productos" EntitySet="Productos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Proveedor__id_pr__5CD6CB2B" Association="Self.FK__Proveedor__id_pr__5CD6CB2B">
+            <End Role="Provincia" EntitySet="Provincia" />
+            <End Role="Proveedores" EntitySet="Proveedores" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Usuarios__id_tip__7E02B4CC" Association="Self.FK__Usuarios__id_tip__7E02B4CC">
+            <End Role="tipoUsuario" EntitySet="tipoUsuario" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="InformaticaModelStoreContainer" CdmEntityContainer="InformaticaEntities">
+          <EntitySetMapping Name="Categorias">
+            <EntityTypeMapping TypeName="InformaticaModel.Categorias">
+              <MappingFragment StoreEntitySet="Categorias">
+                <ScalarProperty Name="id_categoria" ColumnName="id_categoria" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Empleados">
+            <EntityTypeMapping TypeName="InformaticaModel.Empleados">
+              <MappingFragment StoreEntitySet="Empleados">
+                <ScalarProperty Name="Dni_empleados" ColumnName="Dni_empleados" />
+                <ScalarProperty Name="apellido" ColumnName="apellido" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="fecha_ingreso" ColumnName="fecha_ingreso" />
+                <ScalarProperty Name="id_provincia" ColumnName="id_provincia" />
+                <ScalarProperty Name="estado_emplead" ColumnName="estado_emplead" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="fecha_Nacimiento" ColumnName="fecha_Nacimiento" />
+                <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+                <ScalarProperty Name="turno" ColumnName="turno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Marcas">
+            <EntityTypeMapping TypeName="InformaticaModel.Marcas">
+              <MappingFragment StoreEntitySet="Marcas">
+                <ScalarProperty Name="id_marca" ColumnName="id_marca" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Origen_Producto">
+            <EntityTypeMapping TypeName="InformaticaModel.Origen_Producto">
+              <MappingFragment StoreEntitySet="Origen_Producto">
+                <ScalarProperty Name="id_origen" ColumnName="id_origen" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Productos">
+            <EntityTypeMapping TypeName="InformaticaModel.Productos">
+              <MappingFragment StoreEntitySet="Productos">
+                <ScalarProperty Name="id_producto" ColumnName="id_producto" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="id_categoria" ColumnName="id_categoria" />
+                <ScalarProperty Name="id_marca" ColumnName="id_marca" />
+                <ScalarProperty Name="stock" ColumnName="stock" />
+                <ScalarProperty Name="precio" ColumnName="precio" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="precio_costo" ColumnName="precio_costo" />
+                <ScalarProperty Name="id_origen" ColumnName="id_origen" />
+                <ScalarProperty Name="id_proveedores" ColumnName="id_proveedores" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Proveedores">
+            <EntityTypeMapping TypeName="InformaticaModel.Proveedores">
+              <MappingFragment StoreEntitySet="Proveedores">
+                <ScalarProperty Name="id_proveedor" ColumnName="id_proveedor" />
+                <ScalarProperty Name="razon_social" ColumnName="razon_social" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="id_provincia" ColumnName="id_provincia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Provincia">
+            <EntityTypeMapping TypeName="InformaticaModel.Provincia">
+              <MappingFragment StoreEntitySet="Provincia">
+                <ScalarProperty Name="Id_provincia" ColumnName="Id_provincia" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="InformaticaModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipoUsuario">
+            <EntityTypeMapping TypeName="InformaticaModel.tipoUsuario">
+              <MappingFragment StoreEntitySet="tipoUsuario">
+                <ScalarProperty Name="id_tipoUsuario" ColumnName="id_tipoUsuario" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuarios">
+            <EntityTypeMapping TypeName="InformaticaModel.Usuarios">
+              <MappingFragment StoreEntitySet="Usuarios">
+                <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+                <ScalarProperty Name="dni_Empleados" ColumnName="dni_Empleados" />
+                <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+                <ScalarProperty Name="id_tipoUsuario" ColumnName="id_tipoUsuario" />
+                <ScalarProperty Name="Estado_usuario" ColumnName="Estado_usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

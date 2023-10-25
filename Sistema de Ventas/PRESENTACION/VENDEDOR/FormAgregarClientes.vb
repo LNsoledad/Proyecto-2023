@@ -36,47 +36,19 @@
     '************************** Controles de los campos *************************************
 
     Private Sub TBDni_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBDni.KeyPress
-        If Char.IsDigit(e.KeyChar) Then
-            e.Handled = False
-        ElseIf Char.IsControl(e.KeyChar) Then
-            e.Handled = False
-        Else
-            e.Handled = True
-            MsgBox("Solo se puede ingresar valores numéricos")
-        End If
+        validarSoloNumeros(e)
     End Sub
 
     Private Sub TBNombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBNombre.KeyPress
-        If Char.IsLetter(e.KeyChar) Then
-            e.Handled = False
-        ElseIf Char.IsControl(e.KeyChar) Then
-            e.Handled = False
-        Else
-            e.Handled = True
-            MsgBox("Solo se puede ingresar letras")
-        End If
+        validarSoloLetras(e)
     End Sub
 
     Private Sub TBApellido_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBApellido.KeyPress
-        If Char.IsLetter(e.KeyChar) Then
-            e.Handled = False
-        ElseIf Char.IsControl(e.KeyChar) Then
-            e.Handled = False
-        Else
-            e.Handled = True
-            MsgBox("Solo se puede ingresar letras")
-        End If
+        validarSoloLetras(e)
     End Sub
 
     Private Sub TBTelefono_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBTelefono.KeyPress
-        If Char.IsDigit(e.KeyChar) Then
-            e.Handled = False
-        ElseIf Char.IsControl(e.KeyChar) Then
-            e.Handled = False
-        Else
-            e.Handled = True
-            MsgBox("Solo se puede ingresar valores numéricos")
-        End If
+        validarSoloNumeros(e)
     End Sub
 
     '************************** Autocompletar Ciudad y CP *************************************

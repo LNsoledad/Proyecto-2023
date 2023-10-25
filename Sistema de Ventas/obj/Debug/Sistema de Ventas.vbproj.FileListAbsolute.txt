@@ -23,3 +23,6 @@ C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\bin\
 C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema de Ventas.exe
 C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema de Ventas.xml
 C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema de Ventas.pdb
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema_de_Ventas.FormAgregarEmpleado.resources
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema_de_Ventas.FormEditarEmpleado.resources
+C:\Users\Soledad Lopez\Desktop\Proyecto\Sistema de Ventas\Sistema de Ventas\obj\Debug\Sistema_de_Ventas.FormEmpleado.resources

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9588cc2911b84117b0c6809d8a89d8b3" Name="Diagram1">
+        <EntityTypeShape EntityType="InformaticaModel.Categorias" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InformaticaModel.Empleados" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InformaticaModel.Marcas" Width="1.5" PointX="3" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InformaticaModel.Origen_Producto" Width="1.5" PointX="3" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="InformaticaModel.Productos" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="InformaticaModel.Proveedores" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="InformaticaModel.Provincia" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InformaticaModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InformaticaModel.tipoUsuario" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="InformaticaModel.Usuarios" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <AssociationConnector Association="InformaticaModel.FK__Productos__id_ca__02FC7413" ManuallyRouted="false" />
+        <AssociationConnector Association="InformaticaModel.FK__Empleados__id_pr__7B264821" ManuallyRouted="false" />
+        <AssociationConnector Association="InformaticaModel.FK__Usuarios__dni_Em__7EF6D905" ManuallyRouted="false" />
+        <AssociationConnector Association="InformaticaModel.FK__Productos__id_ma__03F0984C" ManuallyRouted="false" />
+        <AssociationConnector Association="InformaticaModel.FK__Productos__id_or__02084FDA" ManuallyRouted="false" />
+        <AssociationConnector Association="InformaticaModel.FK__Productos__id_pr__04E4BC85" ManuallyRouted="false" />
+        <AssociationConnector Association="InformaticaModel.FK__Proveedor__id_pr__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="InformaticaModel.FK__Usuarios__id_tip__7E02B4CC" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

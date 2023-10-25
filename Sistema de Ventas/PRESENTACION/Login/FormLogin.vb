@@ -3,23 +3,43 @@
         If (Me.TBNUsuario.Text = "admin") And (Me.TBContrasenia.Text = "admin") Then
 
             FormPrincipal.Show()
+            FormPrincipal.BtnClientes.Enabled = False
+            FormPrincipal.BtnReporte.Enabled = False
+            FormPrincipal.BtnUsuarios.Enabled = False
+            FormPrincipal.BtnVenta.Enabled = False
+            FormPrincipal.BtnBackUp.Enabled = False
             'Me.Close()
 
         ElseIf (Me.TBNUsuario.Text = "vendedor") And (Me.TBContrasenia.Text = "vendedor") Then
 
             FormPrincipal.Show()
-
-            FormPrincipal.BtnProductos.Enabled = False
+            FormPrincipal.BtnReporte.Enabled = False
             FormPrincipal.BtnUsuarios.Enabled = False
+            'FormPrincipal.BtnVenta.Enabled = False
+            FormPrincipal.BtnBackUp.Enabled = False
+            FormPrincipal.BtnUsuarios.Enabled = False
+            FormPrincipal.BtnEmpleados.Enabled = False
 
-        ElseIf (Me.TBNUsuario.Text = "usuario") And (Me.TBContrasenia.Text = "usuario") Then
+
+        ElseIf (Me.TBNUsuario.Text = "superadmin") And (Me.TBContrasenia.Text = "super") Then
 
             FormPrincipal.Show()
 
             FormPrincipal.BtnClientes.Enabled = False
             FormPrincipal.BtnProductos.Enabled = False
-            FormPrincipal.BtnUsuarios.Enabled = False
+            FormPrincipal.BtnReporte.Enabled = False
             FormPrincipal.BtnVenta.Enabled = False
+            FormPrincipal.BtnEmpleados.Enabled = False
+
+        ElseIf (Me.TBNUsuario.Text = "supervisor") And (Me.TBContrasenia.Text = "super") Then
+
+            FormPrincipal.Show()
+            FormPrincipal.BtnClientes.Enabled = False
+            FormPrincipal.BtnProductos.Enabled = False
+            FormPrincipal.BtnBackUp.Enabled = False
+            FormPrincipal.BtnVenta.Enabled = False
+            FormPrincipal.BtnEmpleados.Enabled = False
+            FormPrincipal.BtnUsuarios.Enabled = False
 
         Else
             MsgBox("Usuario no encontrado")
@@ -30,4 +50,7 @@
         Application.Exit()
     End Sub
 
+    Private Sub TBNUsuario_TextChanged(sender As Object, e As EventArgs) Handles TBNUsuario.TextChanged
+
+    End Sub
 End Class

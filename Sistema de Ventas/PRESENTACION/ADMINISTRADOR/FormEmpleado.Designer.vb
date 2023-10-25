@@ -34,7 +34,7 @@ Partial Class FormEmpleado
         Me.TBBuscar = New System.Windows.Forms.TextBox()
         Me.CBCriterio = New System.Windows.Forms.ComboBox()
         Me.LblCriterio = New System.Windows.Forms.Label()
-        Me.DGVClientes = New System.Windows.Forms.DataGridView()
+        Me.DGVEmpleado = New System.Windows.Forms.DataGridView()
         Me.dni = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -50,7 +50,7 @@ Partial Class FormEmpleado
         Me.PnlTitulo.SuspendLayout()
         Me.GBBuscar.SuspendLayout()
         CType(Me.PBBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DGVClientes, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGVEmpleado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlBotones.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -136,13 +136,13 @@ Partial Class FormEmpleado
         Me.LblCriterio.TabIndex = 1
         Me.LblCriterio.Text = "Criterio:"
         '
-        'DGVClientes
+        'DGVEmpleado
         '
-        Me.DGVClientes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.DGVEmpleado.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DGVClientes.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DGVClientes.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DGVEmpleado.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DGVEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(64, Byte), Integer))
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -150,12 +150,12 @@ Partial Class FormEmpleado
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(184, Byte), Integer))
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGVClientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DGVClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVClientes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dni, Me.nombre, Me.apellido, Me.telefono, Me.direccion, Me.provincia, Me.FechaIng, Me.Tur})
-        Me.DGVClientes.EnableHeadersVisualStyles = False
-        Me.DGVClientes.Location = New System.Drawing.Point(5, 189)
-        Me.DGVClientes.Name = "DGVClientes"
+        Me.DGVEmpleado.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DGVEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGVEmpleado.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dni, Me.nombre, Me.apellido, Me.telefono, Me.direccion, Me.provincia, Me.FechaIng, Me.Tur})
+        Me.DGVEmpleado.EnableHeadersVisualStyles = False
+        Me.DGVEmpleado.Location = New System.Drawing.Point(5, 189)
+        Me.DGVEmpleado.Name = "DGVEmpleado"
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -163,18 +163,18 @@ Partial Class FormEmpleado
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(184, Byte), Integer))
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGVClientes.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.DGVClientes.RowHeadersWidth = 25
+        Me.DGVEmpleado.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.DGVEmpleado.RowHeadersWidth = 25
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(214, Byte), Integer))
         DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
-        Me.DGVClientes.RowsDefaultCellStyle = DataGridViewCellStyle4
-        Me.DGVClientes.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White
-        Me.DGVClientes.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
-        Me.DGVClientes.Size = New System.Drawing.Size(800, 191)
-        Me.DGVClientes.TabIndex = 5
+        Me.DGVEmpleado.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.DGVEmpleado.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White
+        Me.DGVEmpleado.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
+        Me.DGVEmpleado.Size = New System.Drawing.Size(795, 191)
+        Me.DGVEmpleado.TabIndex = 5
         '
         'dni
         '
@@ -241,7 +241,7 @@ Partial Class FormEmpleado
         Me.BtnEliminar.ForeColor = System.Drawing.Color.White
         Me.BtnEliminar.Image = CType(resources.GetObject("BtnEliminar.Image"), System.Drawing.Image)
         Me.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEliminar.Location = New System.Drawing.Point(531, 10)
+        Me.BtnEliminar.Location = New System.Drawing.Point(530, 4)
         Me.BtnEliminar.Name = "BtnEliminar"
         Me.BtnEliminar.Size = New System.Drawing.Size(115, 42)
         Me.BtnEliminar.TabIndex = 8
@@ -286,7 +286,7 @@ Partial Class FormEmpleado
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.DGVClientes)
+        Me.Controls.Add(Me.DGVEmpleado)
         Me.Controls.Add(Me.PnlBotones)
         Me.Controls.Add(Me.GBBuscar)
         Me.Controls.Add(Me.PnlTitulo)
@@ -298,7 +298,7 @@ Partial Class FormEmpleado
         Me.GBBuscar.ResumeLayout(False)
         Me.GBBuscar.PerformLayout()
         CType(Me.PBBuscar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DGVClientes, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGVEmpleado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnlBotones.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -311,7 +311,7 @@ Partial Class FormEmpleado
     Friend WithEvents TBBuscar As TextBox
     Friend WithEvents CBCriterio As ComboBox
     Friend WithEvents LblCriterio As Label
-    Friend WithEvents DGVClientes As DataGridView
+    Friend WithEvents DGVEmpleado As DataGridView
     Friend WithEvents dni As DataGridViewTextBoxColumn
     Friend WithEvents nombre As DataGridViewTextBoxColumn
     Friend WithEvents apellido As DataGridViewTextBoxColumn

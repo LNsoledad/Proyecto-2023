@@ -28,14 +28,14 @@
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
         FormEditarUsuario.Show()
 
-        FormEditarUsuario.TBUsuarioDni.Text = DGVUsuarios.CurrentRow.Cells(0).Value.ToString
-        FormEditarUsuario.TBContrasenia.Text = DGVUsuarios.CurrentRow.Cells(1).Value.ToString
+        FormEditarUsuario.TBDniU.Text = DGVUsuarios.CurrentRow.Cells(0).Value.ToString
+        FormEditarUsuario.TBContraseniaU.Text = DGVUsuarios.CurrentRow.Cells(1).Value.ToString
         FormEditarUsuario.CBCargo.Text = DGVUsuarios.CurrentRow.Cells(2).Value.ToString
-        FormEditarUsuario.TBNombre.Text = DGVUsuarios.CurrentRow.Cells(3).Value.ToString
-        FormEditarUsuario.TBApellido.Text = DGVUsuarios.CurrentRow.Cells(4).Value.ToString
+        FormEditarUsuario.TBNombreU.Text = DGVUsuarios.CurrentRow.Cells(3).Value.ToString
+        FormEditarUsuario.TBApellidoU.Text = DGVUsuarios.CurrentRow.Cells(4).Value.ToString
         FormEditarUsuario.DTPFNacimiento.Text = DGVUsuarios.CurrentRow.Cells(5).Value.ToString
-        FormEditarUsuario.TBTelefono.Text = DGVUsuarios.CurrentRow.Cells(6).Value.ToString
-        FormEditarUsuario.TBDireccion.Text = DGVUsuarios.CurrentRow.Cells(7).Value.ToString
+        FormEditarUsuario.TBTelefonoU.Text = DGVUsuarios.CurrentRow.Cells(6).Value.ToString
+        FormEditarUsuario.TBDireccionU.Text = DGVUsuarios.CurrentRow.Cells(7).Value.ToString
         FormEditarUsuario.CBProvincia.Text = DGVUsuarios.CurrentRow.Cells(8).Value.ToString
         FormEditarUsuario.CBCiudad.Text = DGVUsuarios.CurrentRow.Cells(9).Value.ToString
 

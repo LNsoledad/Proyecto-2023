@@ -10,14 +10,14 @@
 
     Private Sub BtnBorrar_Click(sender As Object, e As EventArgs) Handles BtnBorrar.Click
 
-        TBUsuarioDni.Clear()
-        TBContrasenia.Clear()
+        TBDniU.Clear()
+        TBContraseniaU.Clear()
         CBCargo.Text = ""
-        TBNombre.Clear()
-        TBApellido.Clear()
+        TBNombreU.Clear()
+        TBApellidoU.Clear()
         DTPFNacimiento.Text = ""
-        TBTelefono.Clear()
-        TBDireccion.Clear()
+        TBTelefonoU.Clear()
+        TBDireccionU.Clear()
         CBProvincia.Text = ""
         CBCiudad.Text = ""
 
@@ -38,14 +38,14 @@
 
         indice = FormUsuario.DGVUsuarios.CurrentRow.Index
 
-        FormUsuario.DGVUsuarios(0, indice).Value = TBUsuarioDni().Text
-        FormUsuario.DGVUsuarios(1, indice).Value = TBContrasenia().Text
+        FormUsuario.DGVUsuarios(0, indice).Value = TBDniU().Text
+        FormUsuario.DGVUsuarios(1, indice).Value = TBContraseniaU().Text
         FormUsuario.DGVUsuarios(2, indice).Value = CBCargo().Text
-        FormUsuario.DGVUsuarios(3, indice).Value = TBNombre().Text
-        FormUsuario.DGVUsuarios(4, indice).Value = TBApellido().Text
+        FormUsuario.DGVUsuarios(3, indice).Value = TBNombreU().Text
+        FormUsuario.DGVUsuarios(4, indice).Value = TBApellidoU().Text
         FormUsuario.DGVUsuarios(5, indice).Value = DTPFNacimiento().Text
-        FormUsuario.DGVUsuarios(6, indice).Value = TBTelefono().Text
-        FormUsuario.DGVUsuarios(7, indice).Value = TBDireccion().Text
+        FormUsuario.DGVUsuarios(6, indice).Value = TBTelefonoU().Text
+        FormUsuario.DGVUsuarios(7, indice).Value = TBDireccionU().Text
         FormUsuario.DGVUsuarios(8, indice).Value = CBProvincia().Text
         FormUsuario.DGVUsuarios(9, indice).Value = CBCiudad().Text
 
@@ -56,51 +56,9 @@
         Me.Close()
     End Sub
 
-    '************************** Controles de los campos *************************************
 
-    Private Sub TBUsuarioDni_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBUsuarioDni.KeyPress
-        If Char.IsDigit(e.KeyChar) Then
-            e.Handled = False
-        ElseIf Char.IsControl(e.KeyChar) Then
-            e.Handled = False
-        Else
-            e.Handled = True
-            MsgBox("Solo se puede ingresar valores numéricos")
-        End If
-    End Sub
 
-    Private Sub TBNombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBNombre.KeyPress
-        If Char.IsLetter(e.KeyChar) Then
-            e.Handled = False
-        ElseIf Char.IsControl(e.KeyChar) Then
-            e.Handled = False
-        Else
-            e.Handled = True
-            MsgBox("Solo se puede ingresar letras")
-        End If
-    End Sub
 
-    Private Sub TBApellido_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBApellido.KeyPress
-        If Char.IsLetter(e.KeyChar) Then
-            e.Handled = False
-        ElseIf Char.IsControl(e.KeyChar) Then
-            e.Handled = False
-        Else
-            e.Handled = True
-            MsgBox("Solo se puede ingresar letras")
-        End If
-    End Sub
-
-    Private Sub TBTelefono_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBTelefono.KeyPress
-        If Char.IsDigit(e.KeyChar) Then
-            e.Handled = False
-        ElseIf Char.IsControl(e.KeyChar) Then
-            e.Handled = False
-        Else
-            e.Handled = True
-            MsgBox("Solo se puede ingresar letras")
-        End If
-    End Sub
 
     '************************** Autocompletar Ciudad*************************************
 
@@ -111,5 +69,53 @@
             CBCiudad.Text = "Corrientes"
         End If
     End Sub
+    '************************** Controles de los campos *************************************
 
+    Private Sub TBDireccionU_TextChanged(sender As Object, e As EventArgs) Handles TBDireccionU.TextChanged
+        'validarSoloNumeros(e)
+    End Sub
+    'Private Sub TBNombreU_TextChanged(sender As Object, e As EventArgs) Handles TBNombreU.TextChanged
+    Private Sub TBNombreU_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBNombreU.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+            MsgBox("Solo se puede ingresar letras")
+        End If
+    End Sub
+
+    'Private Sub TBApellidoU_TextChanged(sender As Object, e As EventArgs) Handles TBApellidoU.TextChanged
+    Private Sub TBApellidoU_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBApellidoU.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+            MsgBox("Solo se puede ingresar letras")
+        End If
+    End Sub
+
+    'Private Sub TBTelefonoU_TextChanged(sender As Object, e As EventArgs) Handles TBTelefonoU.TextChanged
+    Private Sub TBTelefonoU_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBTelefonoU.KeyPress
+        'validarSoloNumeros(e)
+        If Char.IsDigit(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+            MsgBox("Solo se puede ingresar valores numéricos")
+        End If
+    End Sub
+
+    Private Sub CBCargo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBCargo.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub TBDniU_TextChanged(sender As Object, e As EventArgs) Handles TBDniU.TextChanged
+
+    End Sub
 End Class

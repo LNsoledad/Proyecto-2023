@@ -370,7 +370,6 @@ Partial Class FormAgregarClientes
         Me.Name = "FormAgregarClientes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormAgregarClientes"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
         Me.PnlBarraTitulo.ResumeLayout(False)
         Me.PnlBarraTitulo.PerformLayout()
         CType(Me.PBMinim2, System.ComponentModel.ISupportInitialize).EndInit()

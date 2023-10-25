@@ -59,22 +59,22 @@ Partial Class FormAgregarUsuario
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TBDniU = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TBContraseñaU = New System.Windows.Forms.TextBox()
+        Me.TBContraseniaU = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.CBCiudadU = New System.Windows.Forms.ComboBox()
+        Me.CBProvinciaU = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TBDireccionU = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TBTelefonoU = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TBApellidoU = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TBNombreU = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.PnlBotones = New System.Windows.Forms.Panel()
@@ -418,7 +418,7 @@ Partial Class FormAgregarUsuario
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.TBDniU)
         Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Controls.Add(Me.TBContraseñaU)
+        Me.GroupBox2.Controls.Add(Me.TBContraseniaU)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
         Me.GroupBox2.Location = New System.Drawing.Point(12, 18)
@@ -476,31 +476,31 @@ Partial Class FormAgregarUsuario
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Contraseña:"
         '
-        'TBContraseñaU
+        'TBContraseniaU
         '
-        Me.TBContraseñaU.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TBContraseñaU.Location = New System.Drawing.Point(149, 72)
-        Me.TBContraseñaU.Name = "TBContraseñaU"
-        Me.TBContraseñaU.Size = New System.Drawing.Size(248, 24)
-        Me.TBContraseñaU.TabIndex = 5
+        Me.TBContraseniaU.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TBContraseniaU.Location = New System.Drawing.Point(149, 72)
+        Me.TBContraseniaU.Name = "TBContraseniaU"
+        Me.TBContraseniaU.Size = New System.Drawing.Size(248, 24)
+        Me.TBContraseniaU.TabIndex = 5
         '
         'GroupBox3
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox3.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox3.Controls.Add(Me.Label4)
-        Me.GroupBox3.Controls.Add(Me.ComboBox2)
-        Me.GroupBox3.Controls.Add(Me.ComboBox3)
+        Me.GroupBox3.Controls.Add(Me.CBCiudadU)
+        Me.GroupBox3.Controls.Add(Me.CBProvinciaU)
         Me.GroupBox3.Controls.Add(Me.Label5)
         Me.GroupBox3.Controls.Add(Me.Label6)
         Me.GroupBox3.Controls.Add(Me.Label7)
-        Me.GroupBox3.Controls.Add(Me.TextBox3)
+        Me.GroupBox3.Controls.Add(Me.TBDireccionU)
         Me.GroupBox3.Controls.Add(Me.Label8)
-        Me.GroupBox3.Controls.Add(Me.TextBox4)
+        Me.GroupBox3.Controls.Add(Me.TBTelefonoU)
         Me.GroupBox3.Controls.Add(Me.Label9)
-        Me.GroupBox3.Controls.Add(Me.TextBox5)
+        Me.GroupBox3.Controls.Add(Me.TBApellidoU)
         Me.GroupBox3.Controls.Add(Me.Label10)
-        Me.GroupBox3.Controls.Add(Me.TextBox6)
+        Me.GroupBox3.Controls.Add(Me.TBNombreU)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.ForeColor = System.Drawing.Color.White
         Me.GroupBox3.Location = New System.Drawing.Point(11, 210)
@@ -532,24 +532,24 @@ Partial Class FormAgregarUsuario
         Me.Label4.TabIndex = 13
         Me.Label4.Text = "F. Nacimiento:"
         '
-        'ComboBox2
+        'CBCiudadU
         '
-        Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(149, 301)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(248, 26)
-        Me.ComboBox2.TabIndex = 22
+        Me.CBCiudadU.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CBCiudadU.FormattingEnabled = True
+        Me.CBCiudadU.Location = New System.Drawing.Point(149, 301)
+        Me.CBCiudadU.Name = "CBCiudadU"
+        Me.CBCiudadU.Size = New System.Drawing.Size(248, 26)
+        Me.CBCiudadU.TabIndex = 22
         '
-        'ComboBox3
+        'CBProvinciaU
         '
-        Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {"1. Buenos Aires", "", "2. Catamarca", "", "3. Chaco", "", "4. Chubut", "", "5. Córdoba", "", "6. Corrientes", "", "7. Entre Ríos", "", "8. Formosa", "", "9. Jujuy", "", "10. La Pampa", "", "11. La Rioja", "", "12. Mendoza", "", "13. Misiones", "", "14. Neuquén", "", "15. Río Negro", "", "16. Salta", "", "17. San Juan", "", "18. San Luis", "", "19. Santa Cruz", "", "20. Santa Fe", "", "21. Santiago del Estero", "", "22. Tierra del Fuego, Antártida e Isla del Atlántico Sur", "", "23.  Tucumán"})
-        Me.ComboBox3.Location = New System.Drawing.Point(149, 256)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(248, 26)
-        Me.ComboBox3.TabIndex = 20
+        Me.CBProvinciaU.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CBProvinciaU.FormattingEnabled = True
+        Me.CBProvinciaU.Items.AddRange(New Object() {"1. Buenos Aires", "", "2. Catamarca", "", "3. Chaco", "", "4. Chubut", "", "5. Córdoba", "", "6. Corrientes", "", "7. Entre Ríos", "", "8. Formosa", "", "9. Jujuy", "", "10. La Pampa", "", "11. La Rioja", "", "12. Mendoza", "", "13. Misiones", "", "14. Neuquén", "", "15. Río Negro", "", "16. Salta", "", "17. San Juan", "", "18. San Luis", "", "19. Santa Cruz", "", "20. Santa Fe", "", "21. Santiago del Estero", "", "22. Tierra del Fuego, Antártida e Isla del Atlántico Sur", "", "23.  Tucumán"})
+        Me.CBProvinciaU.Location = New System.Drawing.Point(149, 256)
+        Me.CBProvinciaU.Name = "CBProvinciaU"
+        Me.CBProvinciaU.Size = New System.Drawing.Size(248, 26)
+        Me.CBProvinciaU.TabIndex = 20
         '
         'Label5
         '
@@ -581,13 +581,13 @@ Partial Class FormAgregarUsuario
         Me.Label7.TabIndex = 17
         Me.Label7.Text = "Dirección:"
         '
-        'TextBox3
+        'TBDireccionU
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(149, 211)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(248, 24)
-        Me.TextBox3.TabIndex = 18
+        Me.TBDireccionU.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TBDireccionU.Location = New System.Drawing.Point(149, 211)
+        Me.TBDireccionU.Name = "TBDireccionU"
+        Me.TBDireccionU.Size = New System.Drawing.Size(248, 24)
+        Me.TBDireccionU.TabIndex = 18
         '
         'Label8
         '
@@ -599,13 +599,13 @@ Partial Class FormAgregarUsuario
         Me.Label8.TabIndex = 15
         Me.Label8.Text = "Teléfono:"
         '
-        'TextBox4
+        'TBTelefonoU
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(149, 166)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(248, 24)
-        Me.TextBox4.TabIndex = 16
+        Me.TBTelefonoU.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TBTelefonoU.Location = New System.Drawing.Point(149, 166)
+        Me.TBTelefonoU.Name = "TBTelefonoU"
+        Me.TBTelefonoU.Size = New System.Drawing.Size(248, 24)
+        Me.TBTelefonoU.TabIndex = 16
         '
         'Label9
         '
@@ -617,13 +617,13 @@ Partial Class FormAgregarUsuario
         Me.Label9.TabIndex = 11
         Me.Label9.Text = "Apellido:"
         '
-        'TextBox5
+        'TBApellidoU
         '
-        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(149, 75)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(248, 24)
-        Me.TextBox5.TabIndex = 12
+        Me.TBApellidoU.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TBApellidoU.Location = New System.Drawing.Point(149, 75)
+        Me.TBApellidoU.Name = "TBApellidoU"
+        Me.TBApellidoU.Size = New System.Drawing.Size(248, 24)
+        Me.TBApellidoU.TabIndex = 12
         '
         'Label10
         '
@@ -635,13 +635,13 @@ Partial Class FormAgregarUsuario
         Me.Label10.TabIndex = 9
         Me.Label10.Text = "Nombre:"
         '
-        'TextBox6
+        'TBNombreU
         '
-        Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(149, 32)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(248, 24)
-        Me.TextBox6.TabIndex = 10
+        Me.TBNombreU.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TBNombreU.Location = New System.Drawing.Point(149, 32)
+        Me.TBNombreU.Name = "TBNombreU"
+        Me.TBNombreU.Size = New System.Drawing.Size(248, 24)
+        Me.TBNombreU.TabIndex = 10
         '
         'Panel4
         '
@@ -696,7 +696,7 @@ Partial Class FormAgregarUsuario
         Me.BtnCancelar.ForeColor = System.Drawing.Color.White
         Me.BtnCancelar.Image = CType(resources.GetObject("BtnCancelar.Image"), System.Drawing.Image)
         Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnCancelar.Location = New System.Drawing.Point(297, 10)
+        Me.BtnCancelar.Location = New System.Drawing.Point(468, 10)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(115, 42)
         Me.BtnCancelar.TabIndex = 26
@@ -711,7 +711,7 @@ Partial Class FormAgregarUsuario
         Me.BtnAceptar.ForeColor = System.Drawing.Color.White
         Me.BtnAceptar.Image = CType(resources.GetObject("BtnAceptar.Image"), System.Drawing.Image)
         Me.BtnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnAceptar.Location = New System.Drawing.Point(165, 10)
+        Me.BtnAceptar.Location = New System.Drawing.Point(260, 10)
         Me.BtnAceptar.Name = "BtnAceptar"
         Me.BtnAceptar.Size = New System.Drawing.Size(115, 42)
         Me.BtnAceptar.TabIndex = 25
@@ -786,22 +786,22 @@ Partial Class FormAgregarUsuario
     Friend WithEvents Label2 As Label
     Friend WithEvents TBDniU As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TBContraseñaU As TextBox
+    Friend WithEvents TBContraseniaU As TextBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Label4 As Label
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents CBCiudadU As ComboBox
+    Friend WithEvents CBProvinciaU As ComboBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TBDireccionU As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TBTelefonoU As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TBApellidoU As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents TBNombreU As TextBox
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Panel5 As Panel
     Friend WithEvents PnlBotones As Panel

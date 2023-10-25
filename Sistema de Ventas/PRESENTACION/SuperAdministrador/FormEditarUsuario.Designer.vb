@@ -36,9 +36,9 @@ Partial Class FormEditarUsuario
         Me.CBCargo = New System.Windows.Forms.ComboBox()
         Me.LblCargo = New System.Windows.Forms.Label()
         Me.LblUsuarioDni = New System.Windows.Forms.Label()
-        Me.TBUsuarioDni = New System.Windows.Forms.TextBox()
+        Me.TBDniU = New System.Windows.Forms.TextBox()
         Me.LblContrasenia = New System.Windows.Forms.Label()
-        Me.TBContrasenia = New System.Windows.Forms.TextBox()
+        Me.TBContraseniaU = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DTPFNacimiento = New System.Windows.Forms.DateTimePicker()
         Me.LblFechaNacimiento = New System.Windows.Forms.Label()
@@ -47,13 +47,13 @@ Partial Class FormEditarUsuario
         Me.LblCiudad = New System.Windows.Forms.Label()
         Me.LblProvincia = New System.Windows.Forms.Label()
         Me.LblDireccion = New System.Windows.Forms.Label()
-        Me.TBDireccion = New System.Windows.Forms.TextBox()
+        Me.TBDireccionU = New System.Windows.Forms.TextBox()
         Me.LblTelefono = New System.Windows.Forms.Label()
-        Me.TBTelefono = New System.Windows.Forms.TextBox()
+        Me.TBTelefonoU = New System.Windows.Forms.TextBox()
         Me.LblApellido = New System.Windows.Forms.Label()
-        Me.TBApellido = New System.Windows.Forms.TextBox()
+        Me.TBApellidoU = New System.Windows.Forms.TextBox()
         Me.LblNombre = New System.Windows.Forms.Label()
-        Me.TBNombre = New System.Windows.Forms.TextBox()
+        Me.TBNombreU = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PnlBarraTitulo.SuspendLayout()
@@ -185,9 +185,9 @@ Partial Class FormEditarUsuario
         Me.GBCargo.Controls.Add(Me.CBCargo)
         Me.GBCargo.Controls.Add(Me.LblCargo)
         Me.GBCargo.Controls.Add(Me.LblUsuarioDni)
-        Me.GBCargo.Controls.Add(Me.TBUsuarioDni)
+        Me.GBCargo.Controls.Add(Me.TBDniU)
         Me.GBCargo.Controls.Add(Me.LblContrasenia)
-        Me.GBCargo.Controls.Add(Me.TBContrasenia)
+        Me.GBCargo.Controls.Add(Me.TBContraseniaU)
         Me.GBCargo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBCargo.ForeColor = System.Drawing.Color.White
         Me.GBCargo.Location = New System.Drawing.Point(12, 18)
@@ -227,13 +227,13 @@ Partial Class FormEditarUsuario
         Me.LblUsuarioDni.TabIndex = 2
         Me.LblUsuarioDni.Text = "Usuario (Dni):"
         '
-        'TBUsuarioDni
+        'TBDniU
         '
-        Me.TBUsuarioDni.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TBUsuarioDni.Location = New System.Drawing.Point(149, 26)
-        Me.TBUsuarioDni.Name = "TBUsuarioDni"
-        Me.TBUsuarioDni.Size = New System.Drawing.Size(248, 24)
-        Me.TBUsuarioDni.TabIndex = 3
+        Me.TBDniU.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TBDniU.Location = New System.Drawing.Point(149, 26)
+        Me.TBDniU.Name = "TBDniU"
+        Me.TBDniU.Size = New System.Drawing.Size(248, 24)
+        Me.TBDniU.TabIndex = 3
         '
         'LblContrasenia
         '
@@ -245,13 +245,13 @@ Partial Class FormEditarUsuario
         Me.LblContrasenia.TabIndex = 4
         Me.LblContrasenia.Text = "Contraseña:"
         '
-        'TBContrasenia
+        'TBContraseniaU
         '
-        Me.TBContrasenia.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TBContrasenia.Location = New System.Drawing.Point(149, 72)
-        Me.TBContrasenia.Name = "TBContrasenia"
-        Me.TBContrasenia.Size = New System.Drawing.Size(248, 24)
-        Me.TBContrasenia.TabIndex = 5
+        Me.TBContraseniaU.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TBContraseniaU.Location = New System.Drawing.Point(149, 72)
+        Me.TBContraseniaU.Name = "TBContraseniaU"
+        Me.TBContraseniaU.Size = New System.Drawing.Size(248, 24)
+        Me.TBContraseniaU.TabIndex = 5
         '
         'GroupBox1
         '
@@ -263,13 +263,13 @@ Partial Class FormEditarUsuario
         Me.GroupBox1.Controls.Add(Me.LblCiudad)
         Me.GroupBox1.Controls.Add(Me.LblProvincia)
         Me.GroupBox1.Controls.Add(Me.LblDireccion)
-        Me.GroupBox1.Controls.Add(Me.TBDireccion)
+        Me.GroupBox1.Controls.Add(Me.TBDireccionU)
         Me.GroupBox1.Controls.Add(Me.LblTelefono)
-        Me.GroupBox1.Controls.Add(Me.TBTelefono)
+        Me.GroupBox1.Controls.Add(Me.TBTelefonoU)
         Me.GroupBox1.Controls.Add(Me.LblApellido)
-        Me.GroupBox1.Controls.Add(Me.TBApellido)
+        Me.GroupBox1.Controls.Add(Me.TBApellidoU)
         Me.GroupBox1.Controls.Add(Me.LblNombre)
-        Me.GroupBox1.Controls.Add(Me.TBNombre)
+        Me.GroupBox1.Controls.Add(Me.TBNombreU)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(12, 202)
@@ -350,13 +350,13 @@ Partial Class FormEditarUsuario
         Me.LblDireccion.TabIndex = 17
         Me.LblDireccion.Text = "Dirección:"
         '
-        'TBDireccion
+        'TBDireccionU
         '
-        Me.TBDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TBDireccion.Location = New System.Drawing.Point(149, 211)
-        Me.TBDireccion.Name = "TBDireccion"
-        Me.TBDireccion.Size = New System.Drawing.Size(248, 24)
-        Me.TBDireccion.TabIndex = 18
+        Me.TBDireccionU.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TBDireccionU.Location = New System.Drawing.Point(149, 211)
+        Me.TBDireccionU.Name = "TBDireccionU"
+        Me.TBDireccionU.Size = New System.Drawing.Size(248, 24)
+        Me.TBDireccionU.TabIndex = 18
         '
         'LblTelefono
         '
@@ -368,13 +368,13 @@ Partial Class FormEditarUsuario
         Me.LblTelefono.TabIndex = 15
         Me.LblTelefono.Text = "Teléfono:"
         '
-        'TBTelefono
+        'TBTelefonoU
         '
-        Me.TBTelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TBTelefono.Location = New System.Drawing.Point(149, 166)
-        Me.TBTelefono.Name = "TBTelefono"
-        Me.TBTelefono.Size = New System.Drawing.Size(248, 24)
-        Me.TBTelefono.TabIndex = 16
+        Me.TBTelefonoU.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TBTelefonoU.Location = New System.Drawing.Point(149, 166)
+        Me.TBTelefonoU.Name = "TBTelefonoU"
+        Me.TBTelefonoU.Size = New System.Drawing.Size(248, 24)
+        Me.TBTelefonoU.TabIndex = 16
         '
         'LblApellido
         '
@@ -386,13 +386,13 @@ Partial Class FormEditarUsuario
         Me.LblApellido.TabIndex = 11
         Me.LblApellido.Text = "Apellido:"
         '
-        'TBApellido
+        'TBApellidoU
         '
-        Me.TBApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TBApellido.Location = New System.Drawing.Point(149, 75)
-        Me.TBApellido.Name = "TBApellido"
-        Me.TBApellido.Size = New System.Drawing.Size(248, 24)
-        Me.TBApellido.TabIndex = 12
+        Me.TBApellidoU.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TBApellidoU.Location = New System.Drawing.Point(149, 75)
+        Me.TBApellidoU.Name = "TBApellidoU"
+        Me.TBApellidoU.Size = New System.Drawing.Size(248, 24)
+        Me.TBApellidoU.TabIndex = 12
         '
         'LblNombre
         '
@@ -404,13 +404,13 @@ Partial Class FormEditarUsuario
         Me.LblNombre.TabIndex = 9
         Me.LblNombre.Text = "Nombre:"
         '
-        'TBNombre
+        'TBNombreU
         '
-        Me.TBNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TBNombre.Location = New System.Drawing.Point(149, 32)
-        Me.TBNombre.Name = "TBNombre"
-        Me.TBNombre.Size = New System.Drawing.Size(248, 24)
-        Me.TBNombre.TabIndex = 10
+        Me.TBNombreU.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TBNombreU.Location = New System.Drawing.Point(149, 32)
+        Me.TBNombreU.Name = "TBNombreU"
+        Me.TBNombreU.Size = New System.Drawing.Size(248, 24)
+        Me.TBNombreU.TabIndex = 10
         '
         'Panel2
         '
@@ -469,9 +469,9 @@ Partial Class FormEditarUsuario
     Friend WithEvents CBCargo As ComboBox
     Friend WithEvents LblCargo As Label
     Friend WithEvents LblUsuarioDni As Label
-    Friend WithEvents TBUsuarioDni As TextBox
+    Friend WithEvents TBDniU As TextBox
     Friend WithEvents LblContrasenia As Label
-    Friend WithEvents TBContrasenia As TextBox
+    Friend WithEvents TBContraseniaU As TextBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents DTPFNacimiento As DateTimePicker
     Friend WithEvents LblFechaNacimiento As Label
@@ -480,13 +480,13 @@ Partial Class FormEditarUsuario
     Friend WithEvents LblCiudad As Label
     Friend WithEvents LblProvincia As Label
     Friend WithEvents LblDireccion As Label
-    Friend WithEvents TBDireccion As TextBox
+    Friend WithEvents TBDireccionU As TextBox
     Friend WithEvents LblTelefono As Label
-    Friend WithEvents TBTelefono As TextBox
+    Friend WithEvents TBTelefonoU As TextBox
     Friend WithEvents LblApellido As Label
-    Friend WithEvents TBApellido As TextBox
+    Friend WithEvents TBApellidoU As TextBox
     Friend WithEvents LblNombre As Label
-    Friend WithEvents TBNombre As TextBox
+    Friend WithEvents TBNombreU As TextBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel
 End Class

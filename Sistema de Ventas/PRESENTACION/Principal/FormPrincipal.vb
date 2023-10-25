@@ -74,6 +74,11 @@
 
         PanelContenido(FormRealizarBackUp)
     End Sub
+    Private Sub BtnEmpleados_Click(sender As Object, e As EventArgs) Handles BtnEmpleados.Click
+
+        PanelContenido(FormEmpleado)
+    End Sub
+
     Private Sub BtnCerrarSesion_Click(sender As Object, e As EventArgs) Handles BtnCerrarSesion.Click
         FormLogin.Show()
         Me.Close()

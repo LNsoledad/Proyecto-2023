@@ -109,4 +109,8 @@
     Private Sub CBCategoria_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBCategoria.SelectedIndexChanged
 
     End Sub
+
+    Private Sub TBDescripcion_TextChanged(sender As Object, e As EventArgs) Handles TBDescripcion.TextChanged
+
+    End Sub
 End Class

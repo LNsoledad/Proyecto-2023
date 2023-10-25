@@ -144,4 +144,43 @@
 
         DGVResumenVentas.Rows.Clear()
     End Sub
+    '*****validacion de campos****'
+    ' Private Sub TBDniCuit_TextChanged(sender As Object, e As EventArgs) Handles TBDniCuit.TextChanged
+    'validarSoloNumeros(e)
+    Private Sub TBDniCuit_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBDniCuit.KeyPress
+        'validarSoloNumeros(e)
+        If Char.IsDigit(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+            MsgBox("Solo se puede ingresar valores numéricos")
+        End If
+    End Sub
+
+    'Private Sub TBSr_TextChanged(sender As Object, e As EventArgs) Handles TBSr.TextChanged
+    Private Sub TBSr_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBSr.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+            MsgBox("Solo se puede ingresar letras")
+        End If
+    End Sub
+
+
+    'Private Sub TBVendedor_TextChanged(sender As Object, e As EventArgs) Handles TBVendedor.TextChanged
+    Private Sub TBVendedor_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBVendedor.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+            MsgBox("Solo se puede ingresar letras")
+        End If
+    End Sub
 End Class
